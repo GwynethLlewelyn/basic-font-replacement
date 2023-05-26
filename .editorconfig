@@ -1,0 +1,37 @@
+# This file is for unifying the coding style for different editors and IDEs
+# editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+
+# The property below is not yet universally supported
+[*.md]
+max_line_length = 108
+word_wrap = true
+# Markdown sometimes uses two spaces at the end to
+#  mark soft line breaks
+trim_trailing_whitespace = false
+
+# WordPress Coding Standards
+# https://make.wordpress.org/core/handbook/coding-standards/
+[{.jshintrc,*.json,*.yml,*.css}]
+indent_style = space
+indent_size = 2
+
+[{*.txt,wp-config-sample.php}]
+end_of_line = crlf
+
+# Linden Scripting Language abhors tabs
+[*.lsl]
+max_line_length = 108
+indent_style = space
+indent_size = 4
