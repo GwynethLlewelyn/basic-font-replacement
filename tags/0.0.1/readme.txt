@@ -17,8 +17,9 @@ A very basic plugin just to add some extra local fonts.
 
 == Installation ==
 
-1. Upload the `basic-font-replacement` directory to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+1. If you got this plugin in a ZIP file, unzip it, then upload the `basic-font-replacement` directory to the `/wp-content/plugins/` directory on your server.
+2. If you got it from GitHub using `git clone github.com/GwynethLlewelyn/basic-font-replacement`, then the actual plugin should be under the `trunk/` directory. Create a directory on your server such as `/wp-content/plugins/basic-font-replacement` and upload _only the content of the `trunk/` directory_ to it.
+3. In either case, activate the plugin through the 'Plugins' menu in the WordPress admin panel.
 
 == Frequently Asked Questions ==
 
