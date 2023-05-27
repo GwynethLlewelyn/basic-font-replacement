@@ -9,6 +9,7 @@
 .gitignore
 .github
 .gitlab-ci.yml
+.nova
 .travis.yml
 .DS_Store
 .*~
@@ -29,10 +30,12 @@ multisite.xml
 multisite.xml.dist
 .phpcs.xml
 phpcs.xml
+phpcs.xsd
 .phpcs.xml.dist
 phpcs.xml.dist
 README.md
 webpack.config.js
+wordpress-stubs.php
 wp-cli.local.yml
 yarn.lock
 tests

@@ -63,8 +63,10 @@ wp-content/plugins/hello.php
 /readme.html
 /license.txt
 
-phpcs.xml
-phpunit.xml
+# Ignore development aids
+wordpress-stubs.php
+phpcs.*
+phpmd.xml
 Thumbs.db
 wp-cli.local.yml
 node_modules/

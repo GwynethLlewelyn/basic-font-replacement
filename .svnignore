@@ -44,5 +44,5 @@ package-lock.json
 
 # Ignore development aids
 wordpress-stubs.php
-phpcs.xml
+phpcs.*
 phpmd.xml

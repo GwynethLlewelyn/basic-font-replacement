@@ -9,13 +9,13 @@ module.exports = function( grunt ) {
 
 		addtextdomain: {
 			options: {
-				textdomain: 'eod-database',
+				textdomain: 'basic-font-replacemet',
 			},
 			update_all_domains: {
 				options: {
 					updateDomains: true
 				},
-				src: [ '*.php', '**/*.php', '!\.git/**/*', '!bin/**/*', '!node_modules/**/*', '!tests/**/*' ]
+				src: [ '*.php', '**/*.php', '!\.git/**/*', '!\.nova/**/*', '!bin/**/*', '!node_modules/**/*', '!tests/**/*' ]
 			}
 		},
 
@@ -32,8 +32,8 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: '/languages',
 					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
-					mainFile: 'eod-database.php',
-					potFilename: 'eod-database.pot',
+					mainFile: 'basic-font-replacemet.php',
+					potFilename: 'basic-font-replacemet.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true
