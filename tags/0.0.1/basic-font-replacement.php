@@ -17,18 +17,28 @@ Author URI: https://gwynethllewelyn.net/
 
 /**
  * Proper way to enqueue scripts and styles
+ *
+ * @return void
  */
-/*
-function basic_font_replacement_scripts() {
-	$basic_font_replacement_js_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . '/css';
+function basic_font_replacement_scripts_and_styles() {
+	/** var string Directory where this plugin is installed. */
+	$basic_font_replacement_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) );
 
-	wp_enqueue_script( 'basic_font_replacement-script', $basic_font_replacement_js_dir . '/js/example.js', array(), '1.0.0', true );
-}
-*/
-function basic_font_replacement_styles() {
-	$basic_font_replacement_css_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . '/css';
+	// we have no scripts (for now) (gwyneth 20230527)
+	/* wp_enqueue_script( 'basic_font_replacement-script',
+		$basic_font_replacement_dir . '/js/replacement-font.js',
+		array(),
+		'1.0.0',
+		true
+	); */
 
-	wp_enqueue_style( 'basic_font_replacement-font', $basic_font_replacement_css_dir . '/replacement-font.css', array(), filemtime( $basic_font_replacement_css_dir .  '/css/replacement-font.css' ), false );
+	// Enqueue our basic CSS which references the new font.
+	wp_enqueue_style( 'basic_font_replacement-css',
+		$basic_font_replacement_dir . '/css/replacement-font.css',
+		array(),
+		filemtime( $basic_font_replacement_dir .  '/css/replacement-font.css' ),
+		false
+	);
 }
-// add_action( 'wp_enqueue_scripts', 'basic_font_replacement_scripts' );
-add_action( 'wp_head', 'basic_font_replacement_styles' );
+
+add_action( 'wp_enqueue_scripts', 'basic_font_replacement_scripts_and_styles' );
