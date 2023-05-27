@@ -18,8 +18,17 @@ Author URI: https://gwynethllewelyn.net/
 /**
  * Proper way to enqueue scripts and styles
  */
+/*
 function basic_font_replacement_scripts() {
-	wp_enqueue_style( 'basic_font_replacement-font', get_stylesheet_uri()  . '/css/replacement-font.css', array(), filemtime( get_template_directory() . '/css/replacement-font.css' ), false );
-	// wp_enqueue_script( 'basic_font_replacement-script', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
+	$basic_font_replacement_js_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . '/css';
+
+	wp_enqueue_script( 'basic_font_replacement-script', $basic_font_replacement_js_dir . '/js/example.js', array(), '1.0.0', true );
 }
-add_action( 'wp_enqueue_scripts', 'basic_font_replacement_scripts' );
+*/
+function basic_font_replacement_styles() {
+	$basic_font_replacement_css_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) ) . '/css';
+
+	wp_enqueue_style( 'basic_font_replacement-font', $basic_font_replacement_css_dir . '/replacement-font.css', array(), filemtime( $basic_font_replacement_css_dir .  '/css/replacement-font.css' ), false );
+}
+// add_action( 'wp_enqueue_scripts', 'basic_font_replacement_scripts' );
+add_action( 'wp_head', 'basic_font_replacement_styles' );
