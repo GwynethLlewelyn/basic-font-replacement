@@ -1,4 +1,4 @@
-![Logo](assets/logo.png)
+![Logo](assets/icon-128x128.jpg)
 
 # Basic Font Replacement WordPress Plugin
 
