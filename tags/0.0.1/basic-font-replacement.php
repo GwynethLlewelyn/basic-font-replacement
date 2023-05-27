@@ -22,7 +22,7 @@ Author URI: https://gwynethllewelyn.net/
  */
 function basic_font_replacement_scripts_and_styles() {
 	/** var string Directory where this plugin is installed. */
-	$basic_font_replacement_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) );
+//	$basic_font_replacement_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) );
 
 	// we have no scripts (for now) (gwyneth 20230527)
 	/* wp_enqueue_script( 'basic_font_replacement-script',
@@ -32,11 +32,16 @@ function basic_font_replacement_scripts_and_styles() {
 		true
 	); */
 
+	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG )
+	{
+		error_log('[DEBUG] ' . plugin_basename( __FILE__ ) . ' plugin: URL: "' . plugin_dir_url( __FILE__ ) . '" Path: "' . plugin_dir_path( __FILE__ ) . '"');
+	}
+
 	// Enqueue our basic CSS which references the new font.
-	wp_enqueue_style( 'basic_font_replacement-css',
-		$basic_font_replacement_dir . '/css/replacement-font.css',
+	wp_enqueue_style( plugin_basename( __FILE__ ),
+		plugin_dir_url( __FILE__ ) . 'css/replacement-font.css',
 		array(),
-		filemtime( $basic_font_replacement_dir .  '/css/replacement-font.css' ),
+		filemtime( plugin_dir_path( __FILE__ ) .  'css/replacement-font.css' ),
 		false
 	);
 }
