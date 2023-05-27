@@ -15,6 +15,8 @@ A very basic plugin just to add some extra local fonts.
 
 A very basic plugin just to add some extra local fonts.
 
+Currently using just the Ardour GM font, a 2000 font designed by Graham Meade (GemFonts/Typothetical) and released as a free font.
+
 == Installation ==
 
 1. If you got this plugin in a ZIP file, unzip it, then upload the `basic-font-replacement` directory to the `/wp-content/plugins/` directory on your server.
@@ -26,6 +28,10 @@ A very basic plugin just to add some extra local fonts.
 = Is this being actively supported? =
 
 Nope.
+
+= I really hate the font you use! Can I replace it by something else? =
+
+Sure, just change `css/replacement-font.css` and add your WOFF2 font under `font/`.
 
 == Screenshots ==
 
