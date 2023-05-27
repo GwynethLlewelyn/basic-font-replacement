@@ -16,22 +16,12 @@ Author URI: https://gwynethllewelyn.net/
 */
 
 /**
- * Proper way to enqueue scripts and styles
+ * Proper way to enqueue scripts and styles.
  *
  * @return void
  */
 function basic_font_replacement_scripts_and_styles() {
-	/** var string Directory where this plugin is installed. */
-//	$basic_font_replacement_dir = trailingslashit( dirname( plugin_basename( __FILE__ ) ) );
-
-	// we have no scripts (for now) (gwyneth 20230527)
-	/* wp_enqueue_script( 'basic_font_replacement-script',
-		$basic_font_replacement_dir . '/js/replacement-font.js',
-		array(),
-		'1.0.0',
-		true
-	); */
-
+	// The only thing we may need to debug is if the paths are correct...
 	if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG )
 	{
 		error_log('[DEBUG] ' . plugin_basename( __FILE__ ) . ' plugin: URL: "' . plugin_dir_url( __FILE__ ) . '" Path: "' . plugin_dir_path( __FILE__ ) . '"');
