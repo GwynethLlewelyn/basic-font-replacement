@@ -1,5 +1,5 @@
-# Eye on Dance Media Library Database Access
+# Basic Font Replacement
 
-This is a private plugin which will not be available to the public-at-large.
+A very basic WordPress plugin just to add some extra locally stored fonts.
 
-Like all WordPress plugin projects, move over to `trunk` to get the actual code. No tags yet!
+There might be more information available on the usual [readme](trunk/readme.txt).
